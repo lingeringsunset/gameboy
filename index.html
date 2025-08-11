@@ -1,0 +1,48 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gameboy Audio Converter</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="app-container">
+        <div class="screen">
+            <h1>Gameboy Audio</h1>
+            <p id="status-message">Upload an audio file to start</p>
+            <div class="controls">
+                <div class="file-upload-wrapper">
+                     <label for="audio-file-input" class="custom-file-upload">
+                        Choose File
+                    </label>
+                    <input type="file" id="audio-file-input" accept="audio/*">
+                    <span id="file-name">No file chosen</span>
+                </div>
+               
+                <div class="slider-group">
+                    <label for="bit-depth-slider">BIT DEPTH: <span id="bit-depth-value">4</span></label>
+                    <input type="range" id="bit-depth-slider" min="1" max="16" value="4" step="1" disabled>
+                </div>
+                <div class="slider-group">
+                    <label for="downsample-slider">DOWN-SAMPLE: <span id="downsample-value">10</span>x</label>
+                    <input type="range" id="downsample-slider" min="1" max="40" value="10" step="1" disabled>
+                </div>
+                 <div class="slider-group">
+                    <label for="gain-slider">VOLUME: <span id="gain-value">30</span>%</label>
+                    <input type="range" id="gain-slider" min="0" max="100" value="30" step="1" disabled>
+                </div>
+            </div>
+            <div class="button-group">
+                <button id="play-btn" disabled>PLAY</button>
+                <button id="stop-btn" disabled>STOP</button>
+                <a id="download-link" class="button-style" style="display: none;">DOWNLOAD</a>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="main.js"></script>
+</body>
+</html>
